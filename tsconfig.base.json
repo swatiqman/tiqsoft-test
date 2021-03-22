@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@tiq-soft-test/app-config": ["libs/app-config/index.ts"],
       "@tiq-soft-test/shells/mychurch": ["libs/shells/mychurch/src/index.ts"],
       "@tiq-soft-test/shells/jumia": ["libs/shells/jumia/src/index.ts"]
     }
