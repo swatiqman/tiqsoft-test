@@ -173,11 +173,26 @@
             "tsConfig": "apps/jumia/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/jumia/src/favicon.ico",
-              "apps/jumia/src/assets"
+              {
+                "glob": "favicon.ico",
+                "input": "libs/shells/jumia/src",
+                "output": "./"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/shells/jumia/src/lib/jumia-assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@taiga-ui/icons/src",
+                "output": "assets/taiga-ui/icons"
+              }
             ],
             "styles": [
-              "apps/jumia/src/styles.scss"
+              "apps/jumia/src/styles.scss",
+              "libs/shells/jumia/src/lib/jumia-styles.scss",
+              "node_modules/@taiga-ui/core/styles/taiga-ui-global.less"
             ],
             "scripts": [],
             "customWebpackConfig": {
