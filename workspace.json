@@ -156,6 +156,156 @@
           }
         }
       }
+    },
+    "jumia": {
+      "projectType": "application",
+      "root": "apps/jumia",
+      "sourceRoot": "apps/jumia/src",
+      "prefix": "tiq-soft-test",
+      "targets": {
+        "build": {
+          "executor": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "outputPath": "dist/apps/jumia",
+            "index": "apps/jumia/src/index.html",
+            "main": "apps/jumia/src/main.ts",
+            "polyfills": "apps/jumia/src/polyfills.ts",
+            "tsConfig": "apps/jumia/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/jumia/src/favicon.ico",
+              "apps/jumia/src/assets"
+            ],
+            "styles": [
+              "apps/jumia/src/styles.scss"
+            ],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            }
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/jumia/src/environments/environment.ts",
+                  "with": "apps/jumia/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@angular-builders/custom-webpack:dev-server",
+          "options": {
+            "browserTarget": "jumia:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "jumia:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "jumia:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/jumia/src/**/*.ts",
+              "apps/jumia/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/jumia"
+          ],
+          "options": {
+            "jestConfig": "apps/jumia/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "jumia-e2e": {
+      "root": "apps/jumia-e2e",
+      "sourceRoot": "apps/jumia-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/jumia-e2e/cypress.json",
+            "tsConfig": "apps/jumia-e2e/tsconfig.e2e.json",
+            "devServerTarget": "jumia:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "jumia:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/jumia-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "shells-jumia": {
+      "projectType": "library",
+      "root": "libs/shells/jumia",
+      "sourceRoot": "libs/shells/jumia/src",
+      "prefix": "jumia",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shells/jumia/src/**/*.ts",
+              "libs/shells/jumia/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shells/jumia"
+          ],
+          "options": {
+            "jestConfig": "libs/shells/jumia/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

@@ -18,6 +18,9 @@
   "projects": {
     "mychurch": { "tags": [] },
     "mychurch-e2e": { "tags": [], "implicitDependencies": ["mychurch"] },
-    "shells-mychurch": { "tags": [] }
+    "shells-mychurch": { "tags": [] },
+    "jumia": { "tags": [] },
+    "jumia-e2e": { "tags": [], "implicitDependencies": ["jumia"] },
+    "shells-jumia": { "tags": [] }
   }
 }
