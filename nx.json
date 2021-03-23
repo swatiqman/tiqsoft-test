@@ -21,6 +21,8 @@
     "shells-mychurch": { "tags": [] },
     "jumia": { "tags": [] },
     "jumia-e2e": { "tags": [], "implicitDependencies": ["jumia"] },
-    "shells-jumia": { "tags": [] }
+    "shells-jumia": { "tags": [] },
+    "models-jumia": { "tags": [] },
+    "models-core": { "tags": [] }
   }
 }

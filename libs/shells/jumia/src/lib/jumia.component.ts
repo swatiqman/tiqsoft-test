@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { ConfigModel, APP_CONFIG } from '@tiq-soft-test/models/core'
 
 @Component({
   selector: 'jumia-jumia',
@@ -6,13 +7,14 @@ import { Component } from '@angular/core';
     <p>
       jumia works!
     </p>
+    <pre>{{ appConfig | json}}</pre>
   `,
   styles: [
   ]
 })
 export class JumiaComponent  {
 
-  // constructor() { }
+  constructor(@Inject(APP_CONFIG) public appConfig: ConfigModel) {  }
 
   // ngOnInit(): void {
   // }
