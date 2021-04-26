@@ -17,17 +17,31 @@
             "tsConfig": "apps/mychurch/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/mychurch/src/favicon.ico",
-              "apps/mychurch/src/assets",
+              {
+                "glob": "favicon.ico",
+                "input": "libs/shells/mychurch/src",
+                "output": "./"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/shells/mychurch/src/assets",
+                "output": "assets"
+              },
               {
                 "glob": "**/*",
                 "input": "node_modules/@taiga-ui/icons/src",
                 "output": "assets/taiga-ui/icons"
+              },
+              {
+                "input": "libs/app-config",
+                "glob": "config.json",
+                "output": "app-config"
               }
             ],
             "styles": [
               "apps/mychurch/src/styles.scss",
-              "node_modules/@taiga-ui/core/styles/taiga-ui-global.less"
+              "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
+              "libs/shells/mychurch/src/mychurch-styles.scss"
             ],
             "scripts": [],
             "customWebpackConfig": { "path": "webpack.config.js" }
@@ -36,8 +50,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/mychurch/src/environments/environment.ts",
-                  "with": "apps/mychurch/src/environments/environment.prod.ts"
+                  "replace": "libs/shells/mychurch/src/environments/mychurch-environment.ts",
+                  "with": "libs/shells/mychurch/src/environments/mychurch-environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -162,7 +176,7 @@
               },
               {
                 "glob": "**/*",
-                "input": "libs/shells/jumia/src/lib/jumia-assets",
+                "input": "libs/shells/jumia/src/assets",
                 "output": "assets"
               },
               {
@@ -172,13 +186,13 @@
               },
               {
                 "input": "libs/app-config",
-                "glob": "**/*",
+                "glob": "config.json",
                 "output": "app-config"
               }
             ],
             "styles": [
               "apps/jumia/src/styles.scss",
-              "libs/shells/jumia/src/lib/jumia-styles.scss",
+              "libs/shells/jumia/src/jumia-styles.scss",
               "node_modules/@taiga-ui/core/styles/taiga-ui-global.less"
             ],
             "scripts": [],
