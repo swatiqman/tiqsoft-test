@@ -15,7 +15,6 @@
             "main": "apps/mychurch/src/main.ts",
             "polyfills": "apps/mychurch/src/polyfills.ts",
             "tsConfig": "apps/mychurch/tsconfig.app.json",
-            "aot": true,
             "assets": [
               {
                 "glob": "favicon.ico",
@@ -44,7 +43,9 @@
               "libs/shells/mychurch/src/mychurch-styles.scss"
             ],
             "scripts": [],
-            "customWebpackConfig": { "path": "webpack.config.js" }
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -78,14 +79,20 @@
         },
         "serve": {
           "executor": "@angular-builders/custom-webpack:dev-server",
-          "options": { "browserTarget": "mychurch:build" },
+          "options": {
+            "browserTarget": "mychurch:build"
+          },
           "configurations": {
-            "production": { "browserTarget": "mychurch:build:production" }
+            "production": {
+              "browserTarget": "mychurch:build:production"
+            }
           }
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": { "browserTarget": "mychurch:build" }
+          "options": {
+            "browserTarget": "mychurch:build"
+          }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -98,7 +105,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/mychurch"],
+          "outputs": [
+            "coverage/apps/mychurch"
+          ],
           "options": {
             "jestConfig": "apps/mychurch/jest.config.js",
             "passWithNoTests": true
@@ -119,12 +128,18 @@
             "devServerTarget": "mychurch:serve"
           },
           "configurations": {
-            "production": { "devServerTarget": "mychurch:serve:production" }
+            "production": {
+              "devServerTarget": "mychurch:serve:production"
+            }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["apps/mychurch-e2e/**/*.{js,ts}"] }
+          "options": {
+            "lintFilePatterns": [
+              "apps/mychurch-e2e/**/*.{js,ts}"
+            ]
+          }
         }
       }
     },
@@ -145,7 +160,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shells/mychurch"],
+          "outputs": [
+            "coverage/libs/shells/mychurch"
+          ],
           "options": {
             "jestConfig": "libs/shells/mychurch/jest.config.js",
             "passWithNoTests": true
@@ -167,7 +184,6 @@
             "main": "apps/jumia/src/main.ts",
             "polyfills": "apps/jumia/src/polyfills.ts",
             "tsConfig": "apps/jumia/tsconfig.app.json",
-            "aot": true,
             "assets": [
               {
                 "glob": "favicon.ico",
@@ -196,7 +212,9 @@
               "node_modules/@taiga-ui/core/styles/taiga-ui-global.less"
             ],
             "scripts": [],
-            "customWebpackConfig": { "path": "webpack.config.js" }
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -230,14 +248,20 @@
         },
         "serve": {
           "executor": "@angular-builders/custom-webpack:dev-server",
-          "options": { "browserTarget": "jumia:build" },
+          "options": {
+            "browserTarget": "jumia:build"
+          },
           "configurations": {
-            "production": { "browserTarget": "jumia:build:production" }
+            "production": {
+              "browserTarget": "jumia:build:production"
+            }
           }
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": { "browserTarget": "jumia:build" }
+          "options": {
+            "browserTarget": "jumia:build"
+          }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -250,7 +274,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/jumia"],
+          "outputs": [
+            "coverage/apps/jumia"
+          ],
           "options": {
             "jestConfig": "apps/jumia/jest.config.js",
             "passWithNoTests": true
@@ -271,12 +297,18 @@
             "devServerTarget": "jumia:serve"
           },
           "configurations": {
-            "production": { "devServerTarget": "jumia:serve:production" }
+            "production": {
+              "devServerTarget": "jumia:serve:production"
+            }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["apps/jumia-e2e/**/*.{js,ts}"] }
+          "options": {
+            "lintFilePatterns": [
+              "apps/jumia-e2e/**/*.{js,ts}"
+            ]
+          }
         }
       }
     },
@@ -297,7 +329,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shells/jumia"],
+          "outputs": [
+            "coverage/libs/shells/jumia"
+          ],
           "options": {
             "jestConfig": "libs/shells/jumia/jest.config.js",
             "passWithNoTests": true
@@ -312,11 +346,17 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["libs/models/jumia/**/*.ts"] }
+          "options": {
+            "lintFilePatterns": [
+              "libs/models/jumia/**/*.ts"
+            ]
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/models/jumia"],
+          "outputs": [
+            "coverage/libs/models/jumia"
+          ],
           "options": {
             "jestConfig": "libs/models/jumia/jest.config.js",
             "passWithNoTests": true
@@ -331,20 +371,179 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["libs/models/core/**/*.ts"] }
+          "options": {
+            "lintFilePatterns": [
+              "libs/models/core/**/*.ts"
+            ]
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/models/core"],
+          "outputs": [
+            "coverage/libs/models/core"
+          ],
           "options": {
             "jestConfig": "libs/models/core/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
+    },
+    "mychurh-admin": {
+      "projectType": "application",
+      "root": "apps/mychurh-admin",
+      "sourceRoot": "apps/mychurh-admin/src",
+      "prefix": "tiq-soft-test",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/mychurh-admin",
+            "index": "apps/mychurh-admin/src/index.html",
+            "main": "apps/mychurh-admin/src/main.ts",
+            "polyfills": "apps/mychurh-admin/src/polyfills.ts",
+            "tsConfig": "apps/mychurh-admin/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/mychurh-admin/src/favicon.ico",
+              "apps/mychurh-admin/src/assets"
+            ],
+            "styles": [
+              "apps/mychurh-admin/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/mychurh-admin/src/environments/environment.ts",
+                  "with": "apps/mychurh-admin/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "mychurh-admin:build:production"
+            },
+            "development": {
+              "browserTarget": "mychurh-admin:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mychurh-admin:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/mychurh-admin/src/**/*.ts",
+              "apps/mychurh-admin/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/mychurh-admin"
+          ],
+          "options": {
+            "jestConfig": "apps/mychurh-admin/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "mychurh-admin-e2e": {
+      "root": "apps/mychurh-admin-e2e",
+      "sourceRoot": "apps/mychurh-admin-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/mychurh-admin-e2e/cypress.json",
+            "tsConfig": "apps/mychurh-admin-e2e/tsconfig.e2e.json",
+            "devServerTarget": "mychurh-admin:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "mychurh-admin:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/mychurh-admin-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "shells-mychurch-admin": {
+      "projectType": "library",
+      "root": "libs/shells/mychurch-admin",
+      "sourceRoot": "libs/shells/mychurch-admin/src",
+      "prefix": "tiq-soft-test",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shells/mychurch-admin"
+          ],
+          "options": {
+            "jestConfig": "libs/shells/mychurch-admin/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shells/mychurch-admin/src/**/*.ts",
+              "libs/shells/mychurch-admin/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
-  "cli": { "defaultCollection": "@nrwl/angular" },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
   "generators": {
     "@nrwl/angular:application": {
       "style": "scss",
@@ -359,7 +558,9 @@
       "unitTestRunner": "jest",
       "strict": true
     },
-    "@nrwl/angular:component": { "style": "scss" }
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
   },
   "defaultProject": "mychurch"
 }

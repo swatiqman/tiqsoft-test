@@ -1,9 +1,14 @@
 {
   "npmScope": "tiq-soft-test",
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -12,17 +17,47 @@
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
     }
   },
   "projects": {
-    "mychurch": { "tags": [] },
-    "mychurch-e2e": { "tags": [], "implicitDependencies": ["mychurch"] },
-    "shells-mychurch": { "tags": [] },
-    "jumia": { "tags": [] },
-    "jumia-e2e": { "tags": [], "implicitDependencies": ["jumia"] },
-    "shells-jumia": { "tags": [] },
-    "models-jumia": { "tags": [] },
-    "models-core": { "tags": [] }
+    "mychurch": {
+      "tags": []
+    },
+    "mychurch-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mychurch"]
+    },
+    "shells-mychurch": {
+      "tags": []
+    },
+    "jumia": {
+      "tags": []
+    },
+    "jumia-e2e": {
+      "tags": [],
+      "implicitDependencies": ["jumia"]
+    },
+    "shells-jumia": {
+      "tags": []
+    },
+    "models-jumia": {
+      "tags": []
+    },
+    "models-core": {
+      "tags": []
+    },
+    "mychurh-admin": {
+      "tags": []
+    },
+    "mychurh-admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mychurh-admin"]
+    },
+    "shells-mychurch-admin": {
+      "tags": []
+    }
   }
 }

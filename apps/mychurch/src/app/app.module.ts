@@ -6,11 +6,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    MychurchModule
-    // RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-  ],
+  imports: [BrowserModule, MychurchModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent],
 })

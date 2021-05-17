@@ -6,5 +6,7 @@ module.exports = {
     '<rootDir>/libs/shells/jumia',
     '<rootDir>/libs/models/jumia',
     '<rootDir>/libs/models/core',
+    '<rootDir>/apps/mychurh-admin',
+    '<rootDir>/libs/shells/mychurch-admin',
   ],
 };

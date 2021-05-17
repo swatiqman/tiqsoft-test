@@ -8,15 +8,25 @@
         "plugin:@nrwl/nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
-      "parserOptions": { "project": ["apps/mychurch/tsconfig.*?.json"] },
+      "parserOptions": {
+        "project": ["apps/mychurch/tsconfig.*?.json"]
+      },
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
-          { "type": "attribute", "prefix": "mychurch", "style": "camelCase" }
+          {
+            "type": "attribute",
+            "prefix": "mychurch",
+            "style": "camelCase"
+          }
         ],
         "@angular-eslint/component-selector": [
           "error",
-          { "type": "element", "prefix": "mychurch", "style": "kebab-case" }
+          {
+            "type": "element",
+            "prefix": "mychurch",
+            "style": "kebab-case"
+          }
         ]
       }
     },
