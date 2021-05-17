@@ -1,1 +1,1 @@
-export * from './lib/shells-mychurch-admin.module';
+export * from './lib/mychurch-admin.module';
